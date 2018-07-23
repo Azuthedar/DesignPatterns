@@ -14,5 +14,6 @@ object QuackCounter
 		quackCounter += 1
 	}
 
+	def setCounterToZero = quackCounter = 0
 	def getCounter : Int = quackCounter
 }

@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180723130322"/>
+		date="20180723142129"/>
 	<dependencies>
 		<module organisation="org.scala-sbt" name="scripted-plugin_2.12">
 			<revision name="1.1.6" status="release" pubdate="20180528070818" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/sbt/sbt" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="6">

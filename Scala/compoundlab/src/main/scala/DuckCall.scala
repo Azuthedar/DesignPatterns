@@ -1,7 +1,7 @@
 
 
 class DuckCall extends IQuackable {
-	def quack : String = {
+	override def quack : String = {
 		"Duck called"
 	}
 }

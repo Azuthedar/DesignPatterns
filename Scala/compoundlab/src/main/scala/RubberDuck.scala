@@ -1,5 +1,5 @@
 class RubberDuck extends IQuackable {
-	def quack : String = {
+	override def quack : String = {
 		"Rubber duck quacked"
 	}
 }

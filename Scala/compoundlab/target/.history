@@ -3,3 +3,4 @@ all {file:/C:/Development/Training/Design_Patterns/gitFolder/DesignPatternsGIT/c
 ;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers" ;*/*:dumpStructureTo C:/Users/bbdnet1836/AppData/Local/Temp/sbt-structure.xml; session clear-all
 all {file:/C:/Development/Training/Design_Patterns/gitFolder/DesignPatternsGIT/compoundlab/}compoundlab/products {file:/C:/Development/Training/Design_Patterns/gitFolder/DesignPatternsGIT/compoundlab/}compoundlab/test:products
 ;reload; set _root_.org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers" ;*/*:dumpStructureTo C:/Users/bbdnet1836/AppData/Local/Temp/sbt-structure.xml; session clear-all
+all {file:/C:/Development/Training/Design_Patterns/gitFolder/DesignPatternsGIT/Scala/compoundlab/}compoundlab/products {file:/C:/Development/Training/Design_Patterns/gitFolder/DesignPatternsGIT/Scala/compoundlab/}compoundlab/test:products

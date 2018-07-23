@@ -15,6 +15,8 @@ class AppTest extends FlatSpec {
 	val duckFactory : DuckFactory = new DuckFactory
 	val duckCounterFactory : DuckCounterFactory = new DuckCounterFactory
 
+	val flock : Flock = new Flock()
+
 	"A duck" should "quack properly" in {
 		assert("Mallard duck quacked" == mallardDuck.quack)
 	}
@@ -55,4 +57,21 @@ class AppTest extends FlatSpec {
 		QuackCounter.setCounterToZero
 	}
 
+	"Flocks".should("be able to return all instances of type IQuackables even if there's a flock inside a flock") in {
+		val smallerFlock : Flock = new Flock()
+		smallerFlock.add(mallardDuck)
+		smallerFlock.add(redHeadDuck)
+
+		flock.add(rubberDuck)
+		flock.add(smallerFlock)
+
+		val sb = new StringBuilder
+
+		sb.append(rubberDuck.quack + " from a flock\n")
+		sb.append(mallardDuck.quack + " from a flock\n")
+		sb.append(redHeadDuck.quack + " from a flock\n")
+		sb.append(" from a flock\n")
+
+		assert(flock.quack == sb.toString)
+	}
 }

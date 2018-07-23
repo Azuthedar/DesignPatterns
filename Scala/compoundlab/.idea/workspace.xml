@@ -19,15 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GooseAdapter.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/GooseAdapter.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MallardDuck.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/MallardDuck.scala">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,8 +49,17 @@
       <file leaf-file-name="AppTest.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/AppTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+            <state relative-caret-position="408">
+              <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Flock.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/Flock.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -146,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/DuckCounterFactory.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/DuckFactory.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/QuackCounter.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Flock.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/AppTest.scala" />
       </list>
     </option>
@@ -415,34 +416,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest - 2018.07.23 at 14h 10m 08s.xml">
+    <history-entry file="AppTest - 2018.07.23 at 15h 22m 06s.xml">
       <configuration name="AppTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="AppTest - 2018.07.23 at 14h 16m 08s.xml">
+    <history-entry file="AppTest - 2018.07.23 at 15h 23m 24s.xml">
       <configuration name="AppTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="AppTest - 2018.07.23 at 14h 16m 38s.xml">
+    <history-entry file="AppTest - 2018.07.23 at 15h 23m 36s.xml">
       <configuration name="AppTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="AppTest - 2018.07.23 at 14h 21m 48s.xml">
+    <history-entry file="AppTest - 2018.07.23 at 15h 28m 53s.xml">
       <configuration name="AppTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="AppTest - 2018.07.23 at 14h 38m 39s.xml">
+    <history-entry file="AppTest - 2018.07.23 at 15h 29m 28s.xml">
       <configuration name="AppTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="AppTest - 2018.07.23 at 14h 39m 26s.xml">
+    <history-entry file="AppTest - 2018.07.23 at 15h 29m 51s.xml">
       <configuration name="AppTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="AppTest - 2018.07.23 at 14h 45m 38s.xml">
+    <history-entry file="AppTest - 2018.07.23 at 15h 30m 04s.xml">
       <configuration name="AppTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="AppTest - 2018.07.23 at 15h 00m 13s.xml">
+    <history-entry file="AppTest - 2018.07.23 at 15h 30m 48s.xml">
       <configuration name="AppTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="AppTest - 2018.07.23 at 15h 00m 45s.xml">
+    <history-entry file="AppTest - 2018.07.23 at 15h 31m 10s.xml">
       <configuration name="AppTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
-    <history-entry file="AppTest - 2018.07.23 at 15h 02m 38s.xml">
+    <history-entry file="AppTest - 2018.07.23 at 15h 31m 24s.xml">
       <configuration name="AppTest" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
   </component>
@@ -460,10 +461,10 @@
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4984375" visible="true" weight="0.33154505" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Azure Activity Log" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32939914" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30688936" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.32943678" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" weight="0.32939914" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32943678" />
       <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="7" />
@@ -758,24 +759,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/IDuckFactory.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/DuckCounterFactory.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/DuckFactory.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -786,10 +773,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/DuckFactory.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/IDuckFactory.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Flock.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/AppTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+        <state relative-caret-position="408">
+          <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
         </state>
       </provider>
     </entry>

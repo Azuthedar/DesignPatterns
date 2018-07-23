@@ -2,20 +2,22 @@ import org.scalatest.FlatSpec
 
 class AppTest extends FlatSpec {
 
-	val goose : Goose = new Goose
-	val gooseAdapter : GooseAdapter = new GooseAdapter(goose)
+	var goose : Goose = new Goose
+	var gooseAdapter : GooseAdapter = new GooseAdapter(goose)
 
-	val mallardDuck : MallardDuck = new MallardDuck
-	val redHeadDuck : RedheadDuck = new RedheadDuck
-	val rubberDuck : RubberDuck = new RubberDuck
-	val duckCall : DuckCall = new DuckCall
+	var mallardDuck : MallardDuck = new MallardDuck
+	var redHeadDuck : RedheadDuck = new RedheadDuck
+	var rubberDuck : RubberDuck = new RubberDuck
+	var duckCall : DuckCall = new DuckCall
 
 	var mallardCounterDuck : QuackCounter = new QuackCounter(mallardDuck)
 
 	val duckFactory : DuckFactory = new DuckFactory
 	val duckCounterFactory : DuckCounterFactory = new DuckCounterFactory
 
-	val flock : Flock = new Flock()
+	var flock : Flock = new Flock()
+
+	val quackologist : Quackologist = new Quackologist
 
 	"A duck" should "quack properly" in {
 		assert("Mallard duck quacked" == mallardDuck.quack)
@@ -37,7 +39,7 @@ class AppTest extends FlatSpec {
 		decorator.quack
 
 		assert(QuackCounter.getCounter == 3)
-		QuackCounter.setCounterToZero
+		QuackCounter.counterToZero()
 	}
 
 	"Default factory".should("create ducks of the specified type") in {
@@ -54,7 +56,7 @@ class AppTest extends FlatSpec {
 		assert(duckCall.quack + " decorated with a counter" == duckCounterFactory.createDuckCall.quack)
 
 		assert(QuackCounter.getCounter == 4)
-		QuackCounter.setCounterToZero
+		QuackCounter.counterToZero()
 	}
 
 	"Flocks".should("be able to return all instances of type IQuackables even if there's a flock inside a flock") in {
@@ -73,5 +75,46 @@ class AppTest extends FlatSpec {
 		sb.append(" from a flock\n")
 
 		assert(flock.quack == sb.toString)
+	}
+
+	"Observers".should("be notified about what happens to the observables") in {
+		//rubberDuck listens on in mallardDuck's notifications
+		mallardDuck = new MallardDuck(Option.apply(rubberDuck))
+		mallardDuck.registerObserver(quackologist)
+
+		print("1: " + mallardDuck.notifyObservers + "\n")
+
+		assert(mallardDuck.notifyObservers == "Quackologist says: \"Duck of type Rubber Duck quacked.\"")
+
+		//Applies to itself
+		mallardDuck = new MallardDuck()
+		mallardDuck.registerObserver(quackologist)
+
+		print("2: " + mallardDuck.notifyObservers + "\n")
+
+		assert(mallardDuck.notifyObservers == "Quackologist says: \"Duck of type Mallard Duck quacked.\"")
+
+		//Go down in the hierarchy of the flock and apply it on it's children nodes
+		mallardDuck = new MallardDuck()
+
+		val smallFlock = new Flock()
+
+		smallFlock.add(new MallardDuck())
+		smallFlock.add(new DuckCall())
+
+		flock = new Flock()
+
+		flock.add(mallardDuck)
+		flock.add(rubberDuck)
+		flock.add(redHeadDuck)
+		flock.add(smallFlock)
+
+		flock.registerObserver(quackologist)
+
+		print("3: {\n" + flock.notifyObservers + "\n}")
+
+		assert(flock.notifyObservers == "Quackologist says: \"Duck of type Mallard Duck quacked.\"\nQuackologist says: \"Duck of type Rubber Duck quacked.\"" +
+		                                "\nQuackologist says: \"Duck of type Rubber Duck quacked.\"\nQuackologist says: \"Duck of type Red head Duck quacked.\"" +
+		                                "\nQuackologist says: \"Duck of type Mallard Duck quacked.\"\nQuackologist says: \"Duck of type Duck Call quacked.\"")
 	}
 }

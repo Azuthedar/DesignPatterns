@@ -2,7 +2,22 @@ import scala.collection.mutable.ArrayBuffer
 
 class Flock extends IQuackable {
 
-	val flock : ArrayBuffer[IQuackable] = ArrayBuffer[IQuackable]()
+	private var name = "Flock"
+	private val flock : ArrayBuffer[IQuackable] = ArrayBuffer[IQuackable]()
+
+	override def registerObserver(observer: IObserver): Unit = {
+		flock.foreach(duck => {
+			duck.registerObserver(observer)
+		})
+	}
+
+	override def notifyObservers: String = {
+		val sb : StringBuilder = new StringBuilder
+		flock.foreach(duck => {
+			sb.append(duck.notifyObservers + "\n")
+		})
+		sb.toString().trim
+	}
 
 	def add(duck : IQuackable) : Unit = {
 		flock.append(duck)
@@ -16,5 +31,9 @@ class Flock extends IQuackable {
 		})
 
 		sb.toString()
+	}
+
+	override def getName: String = {
+		this.name
 	}
 }

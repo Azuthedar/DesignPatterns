@@ -1,6 +1,6 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Development\Training\Design_Patterns\gitFolder\DesignPatternsGIT\compoundlab\src\test\scala\AppTest.scala:8:15: missing argument list for method assertResult in trait Assertions[0m
-[0m[[0m[31merror[0m] [0m[0mUnapplied methods are only converted to functions when a function type is expected.[0m
-[0m[[0m[31merror[0m] [0m[0mYou can make this conversion explicit by writing `assertResult _` or `assertResult(_,_)(_)(_,_)` instead of `assertResult`.[0m
-[0m[[0m[31merror[0m] [0m[0m		assertResult("Mallard duck quacks", mallardDuck.quack)[0m
-[0m[[0m[31merror[0m] [0m[0m		            ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Development\Training\Design_Patterns\gitFolder\DesignPatternsGIT\Scala\compoundlab\src\test\scala\AppTest.scala:82:33: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : RubberDuck[0m
+[0m[[0m[31merror[0m] [0m[0m required: Option[IQuackableObservable][0m
+[0m[[0m[31merror[0m] [0m[0m		mallardDuck = new MallardDuck(rubberDuck)[0m
+[0m[[0m[31merror[0m] [0m[0m		                              ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
